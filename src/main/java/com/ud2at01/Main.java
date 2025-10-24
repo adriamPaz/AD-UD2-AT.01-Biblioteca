@@ -42,28 +42,28 @@ public class Main {
                     System.out.println("8. Borrar todos los libros");
                     switch (sc.nextInt()) {
                         case 1:
-                            
+                            gestorLibros.tablaNueva();
                             break;
                         case 2:
-                            
+                            gestorLibros.addLibro();
                             break;
                         case 3:
-                            
+                            gestorLibros.changeBookName(null, null);
                             break;
                         case 4:
-                            
+                            gestorLibros.changeBookAuthor(null, null);
                             break;
                         case 5:
-                            
+                            gestorLibros.changeBookPublishingDate(switchValue1, null);
                             break;
                         case 6:
-                            
+                            gestorLibros.deleteBook(null);
                             break;
                         case 7:
-                            
+                            gestorLibros.deleteBookAfterYear(switchValue1);
                             break;
                         case 8:
-                            
+                            gestorLibros.cleanBooks();
                             break;
                     
                         default:
@@ -72,8 +72,8 @@ public class Main {
                     break;
                 case 3:
                     data = getServerdata();
-                    gestorBiblioteca = new GestorBiblioteca();
-                    gestorBiblioteca.sentencia1(data.get(0), data.get(1), data.get(2), data.get(3));
+                    gestorLibros = new GestorLibros(null);
+                    //gestorBiblioteca.sentencia1(data.get(0), data.get(1), data.get(2), data.get(3));
                     break;
                 default:
                     salir = true;
